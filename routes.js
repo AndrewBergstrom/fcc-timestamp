@@ -24,12 +24,12 @@ router.get('/:date', (req, res, next) => {
   if(date.isValid()){
     dateObj = {
       unix: Number(date.format('X')),
-      natural: date.format('MMMM D, YYYY')
+      utc: date.format('MMMM D, YYYY')
     };
   } else {
     dateObj = {
       unix: null,
-      natural: null
+      utc: null
     };
   }
   res.json(dateObj)
