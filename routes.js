@@ -15,7 +15,8 @@ router.get('/:date', (req, res, next) => {
     'MMM D YYYY',
     'D MMMM YYYY',
     'D MMM YYYY',
-    'MMMM Do YYYY, h:mm:ss a'
+    'MMMM Do YYYY, h:mm:ss a',
+    'llll'
   ];
   
   const date = moment(req.params.date, formats, true);
@@ -25,7 +26,7 @@ router.get('/:date', (req, res, next) => {
   if(date.isValid()){
     dateObj = {
       unix: Number(date.format('X')),
-      utc: date.format('MMMM D, YYYY')
+      utc: date.format('llll')
     };
   } else {
     dateObj = {
