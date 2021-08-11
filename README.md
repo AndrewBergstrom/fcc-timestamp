@@ -5,4 +5,4 @@
 
 > 2. If it does, it returns both the Unix timestamp and the natural language form of that date.
 
-> 3. If it does not contain a date or Unix timestamp, it returns "error": "Invalid Date"}.
+> 3. If it does not contain a date or Unix timestamp, it returns {"error": "Invalid Date"}.
