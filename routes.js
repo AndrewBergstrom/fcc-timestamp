@@ -30,8 +30,7 @@ router.get('/:date', (req, res, next) => {
     };
   } else {
     dateObj = {
-      unix: null,
-      utc: null
+     error:"Invalid Date"
     };
   }
   res.json(dateObj)
